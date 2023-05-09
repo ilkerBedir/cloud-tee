@@ -1,0 +1,13 @@
+package itu.project.reeexample;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ReeExampleApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ReeExampleApplication.class, args);
+	}
+
+}
