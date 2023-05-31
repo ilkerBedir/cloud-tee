@@ -24,8 +24,8 @@ import java.util.Base64;
 public class EncryptionController {
 
   public String getKey() throws IOException, InterruptedException {
-    String auth = Base64.getEncoder().encodeToString("user:9164bdec-7e62-4d83-845f-cd9756b5c2af".getBytes());
-    HttpRequest request = HttpRequest.newBuilder().uri(URI.create("http://localhost:8083/key")).GET()
+    String auth = Base64.getEncoder().encodeToString("user:fd57f450-e45f-4cd8-81f2-b9f9d98ce74a".getBytes());
+    HttpRequest request = HttpRequest.newBuilder().uri(URI.create("http://172.22.0.2:8080/key")).GET()
         .setHeader(HttpHeaders.AUTHORIZATION, "Basic " + auth).build();
     HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
     return response.body();
